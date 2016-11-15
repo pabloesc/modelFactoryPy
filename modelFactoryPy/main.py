@@ -14,7 +14,8 @@ def getConnection():
     global engine
     config = yaml.load(open(os.environ['MODELFACTORY']+"\\config.yaml")) ## needs to be changed
     engine = sqlalchemy.create_engine("postgresql://"+config.get('postgres').get('username')+":"+
-                                      config.get('postgres').get('password')+"@"+config.get('postgres').get('host')+"/postgres")
+                                      config.get('postgres').get('password')+"@"+config.get('postgres').get('host')+"/"+
+                                      config.get('postgres').get('database'))
     return engine
 ## here add extra options (getConnection to TD/postgressql; if statements: Jenkins user or normal user; streamAPI option)
 #getpass.getuser()
