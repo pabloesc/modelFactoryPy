@@ -12,6 +12,8 @@ def getSummary(df):
     for i in a.index:
         n_na.append(len(df[i])-df[i].count())
     a["n_na"] = n_na
+    a['n'] = a['n'].apply(lambda x: int(x))
+    a['n_na'] = a['n_na'].apply(lambda x: int(x))
     a["variable"] = a.index
     return a.reset_index(drop = True)
 
