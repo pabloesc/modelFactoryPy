@@ -1,6 +1,12 @@
 ---
-postgres:
-  username: your_username
+postgressql:
+  username: your_user
   password: your_password
   host: your_host
   database: your_database
+aster:
+  username: your_user
+  password: your_password
+  host: your_host
+  database: your_database
+
